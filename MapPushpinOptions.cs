@@ -13,16 +13,21 @@ namespace Microsoft.Maps {
     [IgnoreNamespace]
     [ScriptName("Object")]
     public sealed class MapPushpinOptions {
-
-        public string Icon;
-        public string Text;
-        public int TextOffset;
-        public string TypeName;
-        public bool Visible;
-        public int ZIndex;
-        public int Width;
-        public int Height;
         public MapPoint Anchor;
+        public string Color;
+        [ScriptName("color")]
+        public MapColor PinColor;
+        public string Cursor;
         public bool Draggable;
+        public bool EnableClickedStyle;
+        public bool EnableHoverStyle;
+        public string Icon;
+        public bool RoundClickableArea;
+        public string SubTitle;
+        public string Title;
+        public string Text;
+        public MapPoint TextOffset;
+        public bool Visible;
+
     }
 }

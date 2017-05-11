@@ -27,7 +27,7 @@ namespace Microsoft.Maps {
 
         public MapEntityCollection Entities;
 
-        public MapLayerCollection Layers { get { return null; } }
+        public MapLayerCollection Layers;
 
         #endregion Properties
 
@@ -81,9 +81,9 @@ namespace Microsoft.Maps {
 
         public void SetMapType(MapType mapType) { }
 
-        public void SetMapOptions(MapOptions options) { }
+        public void SetOptions(MapOptions options) { }
 
-        public void SetViewOptions(MapViewOptions options) { }
+        public void SetView(MapViewOptions options) { }
 
         public MapPoint TryLocationToPixel(MapLocation location) { return null; }
 
@@ -102,5 +102,44 @@ namespace Microsoft.Maps {
         public MapLocation[] TryPixelToLocation(MapPoint[] points, MapPointReference pointReference) { return null; }
 
         #endregion Methods
+
+        #region Module
+
+        [ScriptAlias("Microsoft.Maps.loadModule")]
+        public static void LoadModule(string moduleKey)
+        { }
+
+        [ScriptAlias("Microsoft.Maps.loadModule")]
+        public static void LoadModule(string[] moduleKeys)
+        { }
+
+        [ScriptAlias("Microsoft.Maps.loadModule")]
+        public static void LoadModule(string moduleKey, MapModuleOptions options)
+        { }
+
+        [ScriptAlias("Microsoft.Maps.loadModule")]
+        public static void LoadModule(string[] moduleKeys, MapModuleOptions options)
+        { }
+
+        [ScriptAlias("Microsoft.Maps.loadModule")]
+        public static void LoadModule(string moduleKey, Action function)
+        { }
+
+        [ScriptAlias("Microsoft.Maps.loadModule")]
+        public static void LoadModule(string[] moduleKeys, Action function)
+        { }
+
+        [ScriptAlias("Microsoft.Maps.moduleLoaded")]
+        public static void ModuleLoaded(string moduleKey)
+        { }
+
+        [ScriptAlias("Microsoft.Maps.registerModule")]
+        public static void RegisterModule(string moduleKey, string scriptUrl)
+        {
+        }
+
+        //TODO: Add RegisterModule(string moduleKey, string scriptUrl, options: { stringURLs: string[]})
+
+        #endregion Module
     }
 }

@@ -8,11 +8,12 @@ using System.Runtime.CompilerServices;
 
 namespace Microsoft.Maps {
 
-    [ScriptImport]
-    [ScriptIgnoreNamespace]
+    [Imported]
     [ScriptName("Object")]
     public sealed class MapModuleOptions {
 
         public Action Callback;
+        public string Credentials;
+        public Action ErrorCallback;
     }
 }

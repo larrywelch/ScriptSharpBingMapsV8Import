@@ -11,7 +11,7 @@ namespace Microsoft.Maps
 {
     [Imported]
     [ScriptName("Layer")]
-    public sealed class MapLayer
+    public class MapLayer
     {
         #region Constructors
 

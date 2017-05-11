@@ -40,6 +40,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -80,6 +82,7 @@
     <Compile Include="MapLayerCollection.cs" />
     <Compile Include="MapLocation.cs" />
     <Compile Include="MapLocationRect.cs" />
+    <Compile Include="MapModuleOptions.cs" />
     <Compile Include="MapOverviewMapMode.cs" />
     <Compile Include="MapNavigationBarOrientation.cs" />
     <Compile Include="MapNavigationBarMode.cs" />
@@ -92,6 +95,11 @@
     <Compile Include="MapRange.cs" />
     <Compile Include="MapType.cs" />
     <Compile Include="MapViewOptions.cs" />
+    <Compile Include="Modules\Cluster\ClusterLayer.cs" />
+    <Compile Include="Modules\Cluster\ClusterLayerOptions.cs" />
+    <Compile Include="Modules\HeatMap\HeatMapLayer.cs" />
+    <Compile Include="Modules\HeatMap\HeatMapLayerOptions.cs" />
+    <Compile Include="Modules\Search\SearchManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -117,17 +125,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\Microsoft.Maps.debug.js" />
-    <Content Include="bin\Debug\Microsoft.Maps.js" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="Script.Web">
       <HintPath>packages\ScriptSharp.Lib.HTML.0.7.5.0\lib\Script.Web.dll</HintPath>
     </Reference>
-    <Reference Include="mscorlib">
-      <HintPath>packages\ScriptSharp.0.7.5.1\tools\mscorlib.dll</HintPath>
-    </Reference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
