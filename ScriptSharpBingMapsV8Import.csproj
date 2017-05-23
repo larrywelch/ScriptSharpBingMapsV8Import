@@ -42,6 +42,17 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    
+    <!-- NuGet Properties -->
+    <PackageId>ScriptSharp.Microsoft.Maps.V8</PackageId>
+    <PackageVersion>1.0.1</PackageVersion>
+    <Authors>Larry Welch</Authors>
+    <Description>A library (based on Script#) for building building web pages that interact with Microsoft's Bing Map V8 control</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <Copyright>Copyright 2017 - Fondation Technologies, LLC</Copyright>
+    <PacakgeTags>Microsoft Bing Map V8 Script# ScriptSharp</PacakgeTags>
+    <!-- End NuGet Properties -->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>

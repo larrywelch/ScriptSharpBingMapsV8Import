@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>ScriptSharp.Microsoft.Maps.V8</id>
-    <version>1.0</version>
+    <version>1.1</version>
     <title>ScriptSharp Microsoft Maps V8</title>
     <authors>Larry Welch</authors>
     <owners>Larry Welch</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A library (based on Script#) for building building web pages that interact with Microsoft's Bing Map V8 control</description>
     <releaseNotes>Initial Release.</releaseNotes>
-    <copyright>Copyright 2017</copyright>
+    <copyright>Copyright 2017 - Foundation Technologies, LLC</copyright>
     <tags>Microsoft Bing Map V8 Script# ScriptSharp</tags>
   </metadata>
 </package>

@@ -20,5 +20,8 @@ namespace Microsoft.Maps
         public Number zIndex;
 
         #endregion Public Properties
+
+        public Function Callback;
+
     }
 }

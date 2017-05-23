@@ -30,6 +30,10 @@ namespace Microsoft.Maps {
         public bool GetClickedStyleEnabled() { return false; }
 
         public object GetColor() { return string.Empty; }
+        [ScriptName("getColor")]
+        public string GetColorAsString() { return string.Empty; }
+        [ScriptName("getColor")]
+        public MapColor GetColorAsColor() { return null;  }
 
         public string GetCursor() { return string.Empty; }
 
