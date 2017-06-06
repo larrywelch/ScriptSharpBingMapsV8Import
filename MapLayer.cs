@@ -43,17 +43,20 @@ namespace Microsoft.Maps
 
         public string GetId() { return string.Empty; }
 
-        public MapEntity[] GetPrimitives() { return null;  }
+        public IPrimitive[] GetPrimitives() { return null;  }
+        [ScriptName("getPrimitives")]
+        public List<IPrimitive> GetPrimitivesAsList() { return null; }
 
         public bool GetVisible() { return false; }
 
         public int GetZIndex() { return 0; }
 
-        public MapEntity Remove(MapEntity entity) { return entity; }
+        public IPrimitive Remove(IPrimitive primitive) { return null; }
 
-        public MapEntity RemoveAt(int index) { return null; }
+        public IPrimitive RemoveAt(int index) { return null; }
 
-        public void SetPrimitives(MapEntity[] entity) { }
+        public void SetPrimitives(IPrimitive[] primitives) { }
+        public void SetPrimitives(List<IPrimitive> primitives) { }
 
         public void SetVisible(bool value) { }
 

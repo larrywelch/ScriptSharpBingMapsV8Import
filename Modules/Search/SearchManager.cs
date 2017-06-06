@@ -19,12 +19,11 @@ namespace Microsoft.Maps.Search
 
         #region Methods
 
-        // TODO: Add options parameters
         public void Geocode(GeocodeRequestOptions options)
         { }
 
-        //public static void reverseGeocode()
-        //{ }
+        public static void reverseGeocode(ReverseGeocodeRequestOptions options)
+        { }
         #endregion Methods
     }
 
@@ -73,6 +72,21 @@ namespace Microsoft.Maps.Search
         public int Timeout;
         public object UserData;
         public string Where;
+    }
+
+    [Imported]
+    [IgnoreNamespace]
+    [ScriptName("Object")]
+    public class ReverseGeocodeRequestOptions
+    {
+        public Action<GeocodeResult, object> Callback;
+        public Action<GeocodeRequestOptions> ErrorCallback;
+        public bool IncludeCountryIso2;
+        public List<string> IncludeEntityTypes;
+        public bool IncludeNeighborhood;
+        public MapLocation Location;
+        public Number Timeout;
+        public object UserData;
     }
 }
 

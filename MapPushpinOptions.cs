@@ -8,7 +8,6 @@ using System.Runtime.CompilerServices;
 
 namespace Microsoft.Maps {
 
-    // TODO: Make properties
     [Imported]
     [IgnoreNamespace]
     [ScriptName("Object")]

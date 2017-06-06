@@ -3,38 +3,29 @@
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 //
 
-using System;
-using System.Collections;
-using System.Html;
 using System.Runtime.CompilerServices;
 
 namespace Microsoft.Maps {
 
-    // TODO: Make properties
-
-    [ScriptImport]
-    [ScriptIgnoreNamespace]
+    [Imported]
+    [IgnoreNamespace]
+    [ScriptName("Object")]
     public sealed class MapMouseEventArgs : MapEventArgs {
 
-        private MapMouseEventArgs() {
-        }
+        #region Constructor
 
-        public bool Handled;
-        public bool IsTouchEvent;
-        public int PageX;
-        public int PageY;
-        public object Target;
-        public string TargetType;
-        public int WheelDelta;
-        public bool IsPrimary;
-        public bool IsSecondary;
+        public MapMouseEventArgs()
+        { }
 
-        public int GetX() {
-            return 0;
-        }
+        #endregion Constructor
 
-        public int GetY() {
-            return 0;
-        }
+        #region Properties
+
+        public Map Target;
+
+        [ScriptName("target")]
+        public IPrimitive TargetAsIPrimitive;
+
+        #endregion Properties
     }
 }

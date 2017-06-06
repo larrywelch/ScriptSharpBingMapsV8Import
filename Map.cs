@@ -5,6 +5,7 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Html;
 using System.Runtime.CompilerServices;
 
@@ -101,6 +102,8 @@ namespace Microsoft.Maps {
 
         public MapLocation[] TryPixelToLocation(MapPoint[] points, MapPointReference pointReference) { return null; }
 
+        public List<MapLocation> TryPixelToLocation(List<MapPoint> points, MapPointReference pointReference) { return null; }
+
         #endregion Methods
 
         #region Module
@@ -129,6 +132,14 @@ namespace Microsoft.Maps {
         public static void LoadModule(string[] moduleKeys, Action function)
         { }
 
+        [ScriptAlias("Microsoft.Maps.loadModule")]
+        public static void LoadModule(List<string> moduleKeys)
+        { }
+
+        [ScriptAlias("Microsoft.Maps.loadModule")]
+        public static void LoadModule(List<string> moduleKeys, Action function)
+        { }
+
         [ScriptAlias("Microsoft.Maps.moduleLoaded")]
         public static void ModuleLoaded(string moduleKey)
         { }
@@ -137,9 +148,13 @@ namespace Microsoft.Maps {
         public static void RegisterModule(string moduleKey, string scriptUrl)
         {
         }
+        [ScriptAlias("Microsoft.Maps.registerModule")]
+        public static void RegisterModule(string moduleKey, string scriptUrl, string[] options)
+        { }
 
-        //TODO: Add RegisterModule(string moduleKey, string scriptUrl, options: { stringURLs: string[]})
-
+        [ScriptAlias("Microsoft.Maps.registerModule")]
+        public static void RegisterModule(string moduleKey, string scriptUrl, List<string> options)
+        { }
         #endregion Module
     }
 }

@@ -10,7 +10,16 @@ using System.Runtime.CompilerServices;
 
 namespace Microsoft.Maps {
 
+    /// <summary>
+    /// Use this handler for viewchange, viewchanged, and viewchangestart events.
+    /// </summary>
+    public delegate void MapEventNoArgsHandler();
+
     public delegate void MapEventHandler(MapEventArgs e);
+    public delegate void MapMouseEventHandler(MapMouseEventArgs e);
+    public delegate void MapTypeEventHandler(MapTypeEventArgs e);
+    public delegate void IPrimitiveChangedEventHandler(IPrimitiveChangedEventArgs e);
+    public delegate void ClusterLayerEventHandler(MapLayerMouseEventArgs e);
 
     [Imported]
     [ScriptName("Events")]
@@ -19,22 +28,63 @@ namespace Microsoft.Maps {
         #region Methods
 
         #region AddHandlers
-        public static object AddHandler(Map map, string eventName, MapEventHandler handler) {
+
+        #region Target = Map 
+        public static object AddHandler(Map map, string eventName, MapMouseEventHandler handler)
+        {
+            return null;
+        }
+        public static object AddHandler(Map map, string eventName, MapTypeEventHandler handler)
+        {
+            return null;
+        }
+        public static object AddHandler(Map map, string eventName, MapEventNoArgsHandler handler)
+        {
+            return null;
+        }
+        #endregion
+
+        #region Target = Pushpin
+        public static object AddHandler(MapPushpin pushpin, string eventName, MapMouseEventHandler handler)
+        {
+            return null;
+        }
+        public static object AddHandler(MapPushpin pushpin, string eventName, IPrimitiveChangedEventHandler handler)
+        {
+            return null;
+        }
+        #endregion
+
+        #region Target = Cluster Layer
+        public static object AddHandler(ClusterLayer clusterLayer, string eventName, ClusterLayerEventHandler handler)
+        {
             return null;
         }
 
-        public static object AddHandler(MapEntity entity, string eventName, MapEventHandler handler) {
+        #endregion 
+
+
+        #region Target = MapEntity
+        public static object AddHandler(MapEntity entity, string eventName, MapEventHandler handler)
+        {
             return null;
         }
+        #endregion
 
-        public static object AddHandler(MapEntityCollection entities, string eventName, MapEventHandler handler) {
+        #region Target = MapEntityCollection
+        public static object AddHandler(MapEntityCollection entities, string eventName, MapEventHandler handler)
+        {
             return null;
         }
+        #endregion
 
+        #region Targe = Layer
         public static object AddHandler(MapLayer layer, string eventName, MapEventHandler handler)
         {
             return null;
         }
+        #endregion
+
 
         #endregion AddHandlers
 

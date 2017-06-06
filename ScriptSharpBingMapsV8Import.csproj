@@ -42,14 +42,14 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
-    
     <!-- NuGet Properties -->
     <PackageId>ScriptSharp.Microsoft.Maps.V8</PackageId>
     <PackageVersion>1.0.1</PackageVersion>
     <Authors>Larry Welch</Authors>
     <Description>A library (based on Script#) for building building web pages that interact with Microsoft's Bing Map V8 control</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageReleaseNotes>
+    </PackageReleaseNotes>
     <Copyright>Copyright 2017 - Fondation Technologies, LLC</Copyright>
     <PacakgeTags>Microsoft Bing Map V8 Script# ScriptSharp</PacakgeTags>
     <!-- End NuGet Properties -->
@@ -80,6 +80,8 @@
     <None Include="packages.config" />
     <None Include="Properties\FxCop.ruleset" />
     <None Include="Properties\Script.template" />
+    <Compile Include="IPrimitive.cs" />
+    <Compile Include="IPrimitiveChangedEventArgs.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="MapColor.cs" />
     <Compile Include="MapEntity.cs" />
@@ -91,9 +93,11 @@
     <Compile Include="MapLabelOverlay.cs" />
     <Compile Include="MapLayer.cs" />
     <Compile Include="MapLayerCollection.cs" />
+    <Compile Include="MapLayerMouseEventArgs.cs" />
     <Compile Include="MapLocation.cs" />
     <Compile Include="MapLocationRect.cs" />
     <Compile Include="MapModuleOptions.cs" />
+    <Compile Include="MapMouseEventArgs.cs" />
     <Compile Include="MapOverviewMapMode.cs" />
     <Compile Include="MapNavigationBarOrientation.cs" />
     <Compile Include="MapNavigationBarMode.cs" />
@@ -105,9 +109,11 @@
     <Compile Include="MapPushpinOptions.cs" />
     <Compile Include="MapRange.cs" />
     <Compile Include="MapType.cs" />
+    <Compile Include="MapTypeEventArgs.cs" />
     <Compile Include="MapViewOptions.cs" />
     <Compile Include="Modules\Cluster\ClusterLayer.cs" />
     <Compile Include="Modules\Cluster\ClusterLayerOptions.cs" />
+    <Compile Include="Modules\Cluster\ClusterPushpin.cs" />
     <Compile Include="Modules\HeatMap\HeatMapLayer.cs" />
     <Compile Include="Modules\HeatMap\HeatMapLayerOptions.cs" />
     <Compile Include="Modules\Search\SearchManager.cs" />

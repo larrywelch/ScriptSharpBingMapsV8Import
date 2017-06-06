@@ -11,10 +11,7 @@ namespace Microsoft.Maps {
     [Imported]
     [IgnoreNamespace]
     [ScriptName("Object")]
-    public abstract class MapEntity {
-
-        [ScriptName("metadata")]
-        public object MetaData;
+    public abstract class MapEntity : IPrimitive {
 
         public bool GetVisible() { return false; }
     }

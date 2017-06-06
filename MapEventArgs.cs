@@ -25,26 +25,11 @@ namespace Microsoft.Maps {
         #region Properties
 
         public string EventName;
-
-        public bool handled;
-
-        public bool IsPrimary;
-
-        public bool isSecondary;
-
-        public bool isTouchEvent;
-
-        public object OriginalEvent;
-
-        public int PageX;
-
-        public int PageY;
-
-        public object Target;
-
+        public MapLocation Location;
+        public Number PageX;
+        public Number PageY;
+        public MapPoint Point;
         public string TargetType;
-
-        public int wheelDelta;
 
         #endregion Properties
 
