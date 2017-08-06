@@ -8,12 +8,12 @@ using System.Runtime.CompilerServices;
 
 namespace Microsoft.Maps {
 
-    // TODO: Make properties
-
-    [ScriptImport]
-    [ScriptIgnoreNamespace]
+    [Imported]
+    [IgnoreNamespace]
     [ScriptName("Object")]
     public sealed class MapInfoboxOptions {
+
+        public MapInfoboxOptions() { }
 
         public MapInfoBoxAction[] Actions;
         public string Description;

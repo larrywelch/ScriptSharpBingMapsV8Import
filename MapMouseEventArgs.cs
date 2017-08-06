@@ -21,10 +21,10 @@ namespace Microsoft.Maps {
 
         #region Properties
 
-        public Map Target;
+        public object Target;
 
-        [ScriptName("target")]
-        public IPrimitive TargetAsIPrimitive;
+        //[ScriptName("target")]
+        //public IPrimitive TargetAsIPrimitive;
 
         #endregion Properties
     }

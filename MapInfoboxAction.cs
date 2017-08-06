@@ -10,12 +10,14 @@ namespace Microsoft.Maps {
 
     // TODO: Make properties
 
-    [ScriptImport]
-    [ScriptIgnoreNamespace]
+    [Imported]
+    [IgnoreNamespace]
     [ScriptName("Object")]
     public sealed class MapInfoBoxAction {
 
+        public MapInfoBoxAction() { }
+
         public string Label;
-        public string EventHandler;
+        public Action EventHandler;
     }
 }

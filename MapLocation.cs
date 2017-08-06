@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 namespace Microsoft.Maps {
 
     [Imported]
+    [IgnoreNamespace]
     [ScriptName("Location")]
     public sealed class MapLocation
     {

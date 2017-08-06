@@ -63,7 +63,6 @@ namespace Microsoft.Maps {
 
         #endregion 
 
-
         #region Target = MapEntity
         public static object AddHandler(MapEntity entity, string eventName, MapEventHandler handler)
         {
@@ -85,6 +84,14 @@ namespace Microsoft.Maps {
         }
         #endregion
 
+        #region Target = MapInfobox
+
+        public static object AddHandler(MapInfobox infobox, string eventName, MapEventHandler handler)
+        {
+            return null;
+        }
+
+        #endregion
 
         #endregion AddHandlers
 

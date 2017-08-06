@@ -90,6 +90,10 @@
     <Compile Include="MapEntityCollectionOptions.cs" />
     <Compile Include="MapEventArgs.cs" />
     <Compile Include="MapEvents.cs" />
+    <Compile Include="MapInfobox.cs" />
+    <Compile Include="MapInfoboxAction.cs" />
+    <Compile Include="MapInfoboxEventArgs.cs" />
+    <Compile Include="MapInfoboxOptions.cs" />
     <Compile Include="MapLabelOverlay.cs" />
     <Compile Include="MapLayer.cs" />
     <Compile Include="MapLayerCollection.cs" />
